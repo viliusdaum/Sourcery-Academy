@@ -1,0 +1,12 @@
+@mixin for-breakpoint($breakpoints) {
+  $conditions: ();
+  @each $breakpoint in $breakpoints {
+    $conditions: append($conditions,
+    #{inspect(map-get($media-queries, $breakpoint))},
+    comma);
+  }
+
+  @media #{$conditions} {
+    @content;
+  }
+}

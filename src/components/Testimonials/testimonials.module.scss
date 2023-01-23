@@ -1,0 +1,163 @@
+@import '../../sass/variables';
+@import '../../sass/global';
+
+.testimonials {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  &--minsk {
+    color: $minsk;
+  }
+
+  &--cobalt {
+    color: $cobalt;
+  }
+
+  &--deep-green {
+    color: $deep-green;
+  }
+
+  &--monza {
+    color: $monza;
+  }
+
+  &__title {
+    align-items: flex-end;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    font-family: $font-montserrat;
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 6rem;
+    padding: 2.5rem 1rem;
+    @include for-breakpoint(tablet) {
+      align-self: center;
+    }
+
+    &__particles {
+      height: 71px;
+      @include for-breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include for-breakpoint(tablet) {
+      align-items: center;
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+  }
+
+  &__particles {
+    margin-top: 5rem;
+
+    @include for-breakpoint(tablet) {
+      display: none;
+    }
+  }
+}
+
+.testimonial {
+  align-items: center;
+  background-color: $white;
+  border: 0.2rem solid $minsk;
+  border-radius: 2.5rem;
+  box-shadow: -2rem 2rem $shadow-grey;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-raleway;
+  height: 100%;
+  margin: 0 1rem;
+  max-width: 28%;
+  z-index: 9000;
+
+  @include for-breakpoint(tablet) {
+    max-width: 100%;
+  }
+
+  &--minsk {
+    border: 0.2rem solid $minsk;
+    color: $minsk;
+  }
+
+  &--cobalt {
+    border: 0.2rem solid $cobalt;
+    color: $cobalt;
+  }
+
+  &--deep-green {
+    border: 0.2rem solid $deep-green;
+    color: $deep-green;
+  }
+
+  &--monza {
+    border: 0.2rem solid $monza;
+    color: $monza;
+  }
+
+  &__message {
+    padding: 0 3rem;
+
+    &-text {
+      color: inherit;
+      font-size: 1.4rem;
+      @include for-breakpoint(desktop) {
+        text-align: center;
+      }
+    }
+
+    &-qoutes {
+      display: block;
+      padding: 3rem 0;
+      position: relative;
+    }
+
+    &-qoutes::before,
+    &-qoutes::after {
+      font-family: $font-montserrat;
+      font-size: 3.8rem;
+      font-style: normal;
+      font-weight: 700;
+      position: absolute;
+    }
+
+    &-qoutes::before {
+      left: 0;
+      top: 0;
+    }
+
+    &-qoutes::after {
+      bottom: 0;
+      margin-bottom: -2rem;
+      right: 0;
+    }
+  }
+
+  &__photo {
+    border-radius: 50%;
+    height: 8rem;
+    margin-top: 3.5rem;
+    width: 8rem;
+  }
+
+  &__name {
+    color: inherit;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__academy {
+    font-size: 1.4rem;
+    margin: 0.7rem 0 3.8rem;
+    text-align: center;
+  }
+}

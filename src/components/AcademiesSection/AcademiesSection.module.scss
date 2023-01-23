@@ -1,0 +1,75 @@
+@import './src/sass/global';
+
+.academies {
+  min-height: 60rem;
+  width: 100%;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15%;
+    position: relative;
+  }
+
+  &__title {
+    color: $minsk;
+    display: flex;
+    font-family: $font-montserrat;
+    font-size: $font-size-title;
+    font-weight: 700;
+    justify-content: center;
+    margin: 8rem auto 0;
+    padding: 0;
+    width: 17rem;
+  }
+
+  &__text {
+    color: $text-color;
+    font-family: $font-raleway;
+    font-size: $font-size-text;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+  }
+
+  &__line-spacer {
+    display: flex;
+    height: 4.8rem;
+    justify-content: center;
+    margin: auto;
+    min-width: 4.8rem;
+    width: 4.8rem;
+  }
+
+  &__scroll-item {
+    background-color: transparent;
+    border: transparent;
+    display: flex;
+    height: 4.8rem;
+    justify-content: center;
+    margin: 2em auto;
+    min-width: 4.8rem;
+    transition: scale 300ms;
+    width: 4.8rem;
+  }
+
+  &__scroll-item:hover {
+    cursor: pointer;
+    scale: 1.5;
+  }
+
+  &__particles {
+    height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    @include for-breakpoint(tablet) {
+      display: none;
+    }
+  }
+}

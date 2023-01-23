@@ -1,0 +1,44 @@
+@import 'src/sass/global';
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 40px;
+
+  a {
+    text-decoration: none;
+
+    &:active,
+    &:visited {
+      color: $minsk;
+    }
+  }
+
+  &__logo-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-width: 220px;
+
+    @include for-breakpoint(tablet) {
+      min-width: unset;
+    }
+
+    h3 {
+      color: $minsk;
+      display: inline-block;
+      margin: 0;
+
+      @include for-breakpoint(tablet) {
+        display: none;
+      }
+    }
+
+    svg {
+      height: 4rem;
+      min-width: 4rem;
+      width: 4rem;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@import '~/src/sass/global';
+
+.admission {
+  display: flex;
+  justify-content: space-between;
+  margin: 200px 0;
+  max-width: 100%;
+  min-height: 85rem;
+  @include for-breakpoint(tablet) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  @include for-breakpoint(smartphone) {
+    text-align: center;
+  }
+
+  &__content {
+    width: 40.92%;
+    @include for-breakpoint(tablet) {
+      width: 100%;
+    }
+  }
+
+  &__dates-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+    max-width: 50%;
+    position: relative;
+
+    @include for-breakpoint(tablet) {
+      display: block;
+      max-width: 100%;
+    }
+
+    :global(.shape) {
+      height: 78.2rem;
+      margin-top: 3%;
+      position: absolute;
+      right: -4%;
+      top: -15vw;
+      width: 46.8rem;
+      @include for-breakpoint(desktop) {
+        display: none;
+      }
+      @include for-breakpoint(maxSize) {
+        margin-top: 0;
+        right: -2rem;
+        top: -20rem;
+      }
+    }
+
+    &__particles {
+      transform: rotate(180deg);
+      width: 2rem;
+      @include for-breakpoint(desktop) {
+        display: none;
+      }
+    }
+
+    h2 {
+      text-align: end;
+      @include for-breakpoint(tablet) {
+        text-align: start;
+      }
+      @include for-breakpoint(smartphone) {
+        text-align: center;
+      }
+    }
+
+    .dates {
+      align-self: flex-end;
+      margin-right: 90px;
+      @include for-breakpoint(desktop) {
+        align-self: flex-end;
+        margin-bottom: 50px;
+        margin-right: 0;
+      }
+    }
+
+    .image-container {
+      align-self: flex-end;
+      margin-right: 50px;
+      max-width: 50rem;
+      min-width: 30rem;
+      width: 100%;
+      @include for-breakpoint(desktop) {
+        align-self: flex-start;
+        margin-right: 0;
+      }
+      @include for-breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+:root {
+  --color-primary: #ff3454;
+  --color-secondary: #404cfa;
+  --font-size-base: 1.6rem;
+  --font-family: system-ui;
+  --line-height-base: 1.5;
+
+  /* Spacers */
+  --spacer-xxs: 0.4rem;
+  --spacer-xs: 0.8rem;
+  --spacer-s: 1.2rem;
+  --spacer-m: 1.6rem;
+  --spacer: var(--spacer-m); /* alias for --spacer-m */
+  --spacer-l: 2rem;
+  --spacer-xl: 2.4rem;
+  --spacer-xxl: 3.2rem;
+  --spacer-xxxl: 4rem;
+}
+
+$font-size-title: 4.8rem;
+$font-size-text: 1.8rem;
+$font-montserrat: 'Montserrat', sans-serif;
+$font-raleway: 'Raleway', sans-serif;
+
+/* Colors */
+$light-blue: #ecebfb;
+$base-color: #3d3691;
+$text-color: #3e3c4e;
+$minsk: #3d3691;
+$gun-powder: #3e3c4e;
+$dodger-blue: #584dfc;
+$royal-blue: #483ed8;
+$cornflower-blue: #7971fd;
+$cornflower-blue-light: #4d8af0;
+$persian-green: #009b84;
+$amaranth: #ed1d55;
+$turquoise: #47e6b1;
+$flamingo: #f55f44;
+$alto: #dbdbdb;
+$hover-light-grey: #f1f1f1;
+$white: #fff;
+$cobalt: #0048c1;
+$deep-green: #0b555f;
+$monza: #b40031;
+$concrete: #f2f2f2;
+$shadow-grey: #f6f5f7;
+$indigo: #3f73cb;
+$mountain-meadow: #1faf9a;
+$deep-sea: #007c6a;
+$french-rose: #f14a77;
+$cardinal: #c01745;
+$white: #fff;
+
+// Header variables
+$font-size-18px: 18px;
+$font-size-14px: 14px;
+
+/* Screen sizes */
+$max-site-width: 1440px;
+$min-site-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$smartphone-width: 480px;
+
+/* Media Queries */
+
+$media-queries: (
+  'tablet': (
+    max-width: $tablet-width,
+  ),
+  'desktop': (
+    max-width: $desktop-width + 1,
+  ),
+  'navigation': (
+    min-width: $tablet-width + 1,
+  ),
+  'maxSize': (
+    min-width: $max-site-width,
+  ),
+  'minSize': (
+    max-width: $min-site-width - 1,
+  ),
+  'smartphone': (
+    max-width: $smartphone-width + 1,
+  ),
+);

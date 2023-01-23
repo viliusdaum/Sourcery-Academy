@@ -1,0 +1,59 @@
+@import './src/sass/global';
+
+.dates-info-wrapper {
+  align-items: center;
+  border: solid 2px;
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 300px;
+  @include for-breakpoint(tablet) {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__dates {
+    color: inherit;
+    font-size: 14px;
+    line-height: 2rem;
+    margin: 0.5rem 0;
+    min-width: 100px;
+    word-spacing: 10px;
+    @include for-breakpoint(tablet) {
+      order: 2;
+    }
+
+    span {
+      font-size: 18px;
+      font-weight: 700;
+      word-spacing: normal;
+    }
+  }
+
+  &__info {
+    color: inherit;
+    display: inline;
+    font-size: 18px;
+    margin: 0 1rem;
+  }
+
+  svg {
+    max-width: 0.12em;
+    @include for-breakpoint(tablet) {
+      display: none;
+    }
+  }
+}
+
+.deep-green {
+  color: $deep-green;
+}
+
+.monza {
+  color: $monza;
+}
+
+.cobalt {
+  color: $cobalt;
+}

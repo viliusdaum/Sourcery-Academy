@@ -1,0 +1,48 @@
+@import '~/src/sass/global';
+
+.admission-content {
+  .deep-green {
+    color: $deep-green;
+  }
+
+  .monza {
+    color: $monza;
+  }
+
+  .cobalt {
+    color: $cobalt;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  &__header {
+    color: inherit;
+    margin-bottom: 0;
+  }
+
+  &__sub-header {
+    color: inherit;
+  }
+
+  &__list {
+    @include for-breakpoint(smartphone) {
+      list-style-type: none;
+    }
+
+    sup {
+      color: $text-color;
+      font-family: $font-raleway;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    li {
+      &::marker {
+        color: inherit;
+        font-size: 4rem;
+      }
+    }
+  }
+}

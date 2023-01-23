@@ -1,0 +1,86 @@
+@import '~/src/sass/global';
+
+.academy4-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  p {
+    font-size: $font-size-text;
+  }
+
+  &__title1,
+  &__title2,
+  &__title3,
+  &__title4 {
+    color: inherit;
+    overflow: hidden;
+  }
+
+  &__text1,
+  &__text2,
+  &__text3,
+  &__text4 {
+    color: $text-color;
+    width: 38rem;
+    @include for-breakpoint(tablet) {
+      width: 30rem;
+    }
+  }
+
+  &__title1,
+  &__text1 {
+    margin: 0;
+  }
+
+  &__title2,
+  &__text2 {
+    align-self: flex-end;
+    margin-bottom: 5rem;
+    margin-top: -5rem;
+    text-align: right;
+    @media only screen and (max-width: 1400px) {
+      margin: 0;
+    }
+    @include for-breakpoint(tablet) {
+      align-self: flex-start;
+      text-align: left;
+    }
+  }
+
+  &__title3,
+  &__text3 {
+    margin-bottom: 10rem;
+    margin-top: -10rem;
+    @media only screen and (max-width: 1400px) {
+      margin: 0;
+    }
+  }
+
+  &__title4,
+  &__text4 {
+    align-self: flex-end;
+    margin-bottom: 15rem;
+    margin-top: -15rem;
+    text-align: right;
+    @media only screen and (max-width: 1400px) {
+      margin: 0;
+    }
+    @include for-breakpoint(tablet) {
+      align-self: flex-start;
+      text-align: left;
+    }
+  }
+}
+
+.deep-green {
+  color: $deep-green;
+}
+
+.monza {
+  color: $monza;
+}
+
+.cobalt {
+  color: $cobalt;
+}

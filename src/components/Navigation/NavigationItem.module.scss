@@ -1,0 +1,74 @@
+@import 'src/sass/global';
+
+.dropdown {
+  cursor: pointer;
+  position: relative;
+
+  &__trigger {
+    background-color: inherit;
+    border: 0;
+    color: $minsk;
+    cursor: pointer;
+    font-family: $font-raleway;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 0;
+
+    svg {
+      height: 1.2rem;
+      transition: 0.5s;
+      width: 1.2rem;
+    }
+
+    &.active {
+      svg {
+        transform: rotate(0.25turn);
+      }
+    }
+  }
+}
+
+.dropdown-content {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  left: -50px;
+  opacity: 0;
+  padding: 8px 0;
+  position: absolute;
+  text-align: left;
+  top: 50px;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  visibility: hidden;
+  width: 200px;
+  z-index: 1;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  li {
+    display: block;
+    font-size: 1.4rem;
+    padding: 10px 0 10px 20px;
+
+    &:hover {
+      background-color: $hover-light-grey;
+    }
+  }
+
+  &__square {
+    background-color: inherit;
+    box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.1);
+    height: 20px;
+    left: 45%;
+    position: absolute;
+    top: -8px;
+    transform: rotate(225deg);
+    width: 20px;
+    z-index: -1;
+  }
+}

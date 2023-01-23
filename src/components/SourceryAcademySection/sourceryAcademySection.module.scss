@@ -1,0 +1,75 @@
+@import './src/sass/global';
+
+.sourceryacademy {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  @include for-breakpoint(tablet) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__title {
+    color: $minsk;
+    font-family: $font-montserrat;
+    font-size: $font-size-title;
+    @include for-breakpoint(tablet) {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    color: $text-color;
+    font-family: $font-raleway;
+    font-size: $font-size-text;
+    @include for-breakpoint(tablet) {
+      margin-left: 15%;
+      margin-right: 15%;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    @include for-breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    &--text {
+      flex-direction: column;
+      margin-right: 15%;
+      padding: 35px;
+      width: 50%;
+      @include for-breakpoint(tablet) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-right: unset;
+        width: 100%;
+      }
+    }
+
+    &--img {
+      min-height: 47rem;
+      width: 50%;
+      @include for-breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+}

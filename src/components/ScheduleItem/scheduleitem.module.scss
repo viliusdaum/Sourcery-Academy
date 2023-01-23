@@ -1,0 +1,227 @@
+@import '../../sass/variables';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.subject-wrapper {
+  background-color: $white;
+  border: 2px solid $minsk;
+  border-radius: 1em;
+  box-shadow: -20px 12px #f6f5f7;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  user-select: none;
+  width: 16.625em;
+
+  &--cobalt {
+    border: 2px solid $cobalt;
+  }
+
+  &--deep-green {
+    border: 2px solid $deep-green;
+  }
+
+  &--monza {
+    border: 2px solid $monza;
+  }
+}
+
+.subject {
+  border-radius: 10px;
+  padding: 18px;
+  width: 100%;
+
+  &--cobalt {
+    background-color: $cobalt;
+  }
+
+  &--deep-green {
+    background-color: $deep-green;
+  }
+
+  &--monza {
+    background-color: $monza;
+  }
+}
+
+.subject-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__title {
+    font-family: $font-raleway;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: start;
+    width: 10em;
+  }
+
+  &__icon {
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    width: 20px;
+
+    &:hover {
+      scale: 1.25;
+    }
+  }
+}
+
+.svg-wrapper {
+  height: 100%;
+}
+
+.subject-content {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px 0;
+  overflow: hidden;
+
+  &__person-icon {
+    width: 15px;
+  }
+
+  &__lecturer-text {
+    font-family: $font-raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 5px;
+    padding: 2px 7px;
+    text-align: start;
+  }
+
+  &__clock-icon {
+    width: 15px;
+  }
+
+  &__start {
+    font-family: $font-raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0 7px;
+  }
+
+  &__duration {
+    font-family: $font-raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0 7px;
+  }
+
+  &__vertical-line {
+    margin: 0 6px;
+    width: 2px;
+  }
+}
+
+.location-wrapper {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+
+  &--cobalt {
+    color: $cobalt;
+  }
+
+  &--deep-green {
+    color: $deep-green;
+  }
+
+  &--monza {
+    color: $monza;
+  }
+}
+
+.location {
+  border: 2px solid;
+  border-radius: 10px;
+  display: inline-flex;
+  margin: 5px 0;
+  padding: 5px;
+
+  &__vertical-line {
+    margin: 0 10px;
+    width: 3px;
+
+    &--cobalt > path {
+      stroke: $cobalt;
+    }
+
+    &--monza > path {
+      stroke: $monza;
+    }
+
+    &--deep-green > path {
+      stroke: $deep-green;
+    }
+  }
+}
+
+.location-date {
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  justify-content: center;
+  width: 60px;
+
+  &__month {
+    font-family: $font-montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  &__day {
+    font-family: $font-raleway;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+  }
+}
+
+.location-container {
+  align-items: center;
+  display: inline-flex;
+  justify-content: start;
+  margin: 0 5px;
+  width: 100%;
+
+  &__icon {
+    width: 15px;
+
+    &--cobalt > path {
+      fill: $cobalt;
+    }
+
+    &--monza > path {
+      fill: $monza;
+    }
+
+    &--deep-green > path {
+      fill: $deep-green;
+    }
+  }
+
+  &__city {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0 5px;
+    text-align: center;
+  }
+}
+
+.inline-wrapper {
+  display: inline-flex;
+}
+
+.subject-border {
+  border: 10px;
+}

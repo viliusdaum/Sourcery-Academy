@@ -1,0 +1,13 @@
+@import './../../sass/global';
+
+.footer {
+  align-items: center;
+  color: $minsk;
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 40px;
+
+  &__social-links {
+    display: flex;
+  }
+}

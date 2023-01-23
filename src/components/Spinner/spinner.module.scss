@@ -1,0 +1,42 @@
+@import '../../sass/variables';
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  border: 7px solid $concrete;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+
+  &--minsk {
+    border-top: 7px solid $minsk;
+  }
+
+  &--cobalt {
+    border-top: 7px solid $cobalt;
+  }
+
+  &--deep-green {
+    border-top: 7px solid $deep-green;
+  }
+
+  &--monza {
+    border-top: 7px solid $monza;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

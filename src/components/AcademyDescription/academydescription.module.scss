@@ -1,0 +1,159 @@
+@import 'src/sass/global';
+
+.description {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  @include for-breakpoint(desktop) {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px;
+  position: relative;
+  width: 40%;
+  @include for-breakpoint(desktop) {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-right: unset;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__topic {
+    font-family: $font-montserrat;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58.51px;
+
+    &--minsk {
+      color: $minsk;
+    }
+
+    &--cobalt {
+      color: $cobalt;
+    }
+
+    &--deep-green {
+      color: $deep-green;
+    }
+
+    &--monza {
+      color: $monza;
+    }
+  }
+
+  &__content {
+    color: $gun-powder;
+    font-family: $font-raleway;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 25px 0;
+  }
+
+  &__spline {
+    margin-top: -3.125em;
+    max-width: 30em;
+    position: absolute;
+    z-index: -1;
+    @include for-breakpoint(desktop) {
+      display: none;
+    }
+  }
+}
+
+.spline-wrapper {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.img-container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: auto;
+  min-height: 400px;
+  width: 60%;
+  @include for-breakpoint(desktop) {
+    width: 100%;
+  }
+  @include for-breakpoint(smartphone) {
+    display: none;
+  }
+
+  &__spline {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    max-width: 45em;
+    @include for-breakpoint(desktop) {
+      display: none;
+    }
+  }
+}
+
+.img-container-wrapper {
+  align-items: center;
+  display: flex;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  justify-content: center;
+
+  &__image {
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 11.25em;
+    height: 35em;
+    margin: auto;
+    opacity: 0.7;
+    width: 40em;
+  }
+}
+
+.play-video {
+  max-width: 4em;
+  position: absolute;
+
+  &--deep-green > path {
+    stroke: $deep-green;
+  }
+
+  &--cobalt > path {
+    stroke: $cobalt;
+  }
+
+  &--minsk > path {
+    stroke: $minsk;
+  }
+
+  &--monza > path {
+    stroke: $monza;
+  }
+}
+
+.spline {
+  &--deep-green > path {
+    stroke: $deep-green;
+  }
+
+  &--cobalt > path {
+    stroke: $cobalt;
+  }
+
+  &--minsk > path {
+    stroke: $minsk;
+  }
+
+  &--monza > path {
+    stroke: $monza;
+  }
+}

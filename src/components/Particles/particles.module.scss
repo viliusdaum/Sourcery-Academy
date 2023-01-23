@@ -1,0 +1,50 @@
+@import 'src/sass/utilities/functions/randomNum';
+@import 'src/sass/variables';
+
+@mixin particle-color($num) {
+  @if ($num <= 3) {
+    background-color: $turquoise;
+  } @else if ($num <= 6) {
+    background-color: $cornflower-blue-light;
+  } @else if ($num <= 9) {
+    background-color: $flamingo;
+  } @else {
+    background-color: $alto;
+  }
+}
+
+@mixin svg($particle, $color) {
+  @if ($particle == 1) {
+    mask-image: url('../../assets/svg/particle1.svg?url');
+  } @else if ($particle == 2) {
+    mask-image: url('../../assets/svg/particle2.svg?url');
+  } @else {
+    mask-image: url('../../assets/svg/particle3.svg?url');
+  }
+  @include particle-color($color);
+}
+
+.particles {
+  position: relative;
+  width: 100%;
+
+  &__particle {
+    height: 20px;
+    mask-repeat: no-repeat;
+    width: 20px;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 640px) {
+    display: none;
+  }
+
+  @for $i from 0 through 100 {
+    &--particleMod-#{$i} {
+      $particle: round(random_num(0, 3));
+      $color: round(random_num(0, 10));
+      @include svg($particle, $color);
+
+      margin: random_num(-10px, 20px) random_num(15px, 250px);
+    }
+  }
+}

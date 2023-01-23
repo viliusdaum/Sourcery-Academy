@@ -1,0 +1,139 @@
+@import '../../sass/variables';
+
+.academy4 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rem;
+  min-height: 60rem;
+  padding: 5rem 0;
+  width: 100%;
+
+  &__particles {
+    @include for-breakpoint(smartphone) {
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3.5rem;
+    position: relative;
+    width: 100%;
+  }
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    @include for-breakpoint(tablet) {
+      justify-content: flex-start;
+      padding: 10rem 0;
+    }
+  }
+
+  &__img-container {
+    &--cobalt > path {
+      stroke: $cobalt;
+    }
+
+    &--deep-green > path {
+      stroke: $deep-green;
+    }
+
+    &--monza > path {
+      stroke: $monza;
+    }
+
+    &--step1,
+    &--step2,
+    &--step3,
+    &--step4,
+    &--oval {
+      height: 13rem;
+      max-width: 19em;
+      position: absolute;
+      width: 19rem;
+    }
+  }
+
+  &__img1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    @include for-breakpoint(tablet) {
+      display: none;
+    }
+    @media only screen and (min-width: 640px) and (max-width: 1400px) {
+      right: 0;
+      top: 4rem;
+    }
+  }
+
+  &__img2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 5%;
+    position: absolute;
+    top: 12rem;
+    width: 100%;
+    z-index: -1;
+    @include for-breakpoint(tablet) {
+      display: none;
+    }
+    @media only screen and (min-width: 640px) and (max-width: 1400px) {
+      left: 0;
+      top: 22.5rem;
+    }
+  }
+
+  &__img3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    top: 28rem;
+    width: 100%;
+    z-index: -1;
+    @include for-breakpoint(tablet) {
+      display: none;
+    }
+    @media only screen and (min-width: 640px) and (max-width: 1400px) {
+      right: 0;
+      top: 40.5rem;
+    }
+  }
+
+  &__img4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 5%;
+    position: absolute;
+    top: 40rem;
+    width: 100%;
+    z-index: -1;
+    @include for-breakpoint(tablet) {
+      display: none;
+    }
+    @media only screen and (min-width: 640px) and (max-width: 1400px) {
+      left: 0;
+      top: 59rem;
+    }
+  }
+}
+
+:global(.academy4-shape) {
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
+}

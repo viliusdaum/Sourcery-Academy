@@ -1,0 +1,91 @@
+@import '../../sass/variables';
+
+@mixin button-style($bg, $border) {
+  background: $bg;
+  border: 1px solid $border;
+}
+
+.button {
+  border-radius: 48px;
+  color: $white;
+  font-size: 18px;
+  font-style: $font-raleway;
+  height: auto;
+  margin: 15px 0;
+  min-height: 48px;
+  padding: 10px 20px;
+  width: fit-content;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--dodger-blue {
+    @include button-style($dodger-blue, $dodger-blue);
+
+    &:hover {
+      cursor: pointer;
+      @include button-style($royal-blue, $royal-blue);
+    }
+
+    &:active {
+      @include button-style($cornflower-blue, $cornflower-blue);
+    }
+
+    &:focus {
+      @include button-style($cornflower-blue, $royal-blue);
+    }
+  }
+
+  &--cornflower-blue-light {
+    @include button-style($cornflower-blue-light, $cornflower-blue-light);
+
+    &:hover {
+      @include button-style($indigo, $indigo);
+    }
+
+    &:active {
+      @include button-style($cornflower-blue, $cornflower-blue);
+    }
+
+    &:focus {
+      @include button-style($indigo, $cornflower-blue);
+    }
+  }
+
+  &--persian-green {
+    @include button-style($persian-green, $persian-green);
+
+    &:hover {
+      @include button-style($mountain-meadow, $mountain-meadow);
+    }
+
+    &:active {
+      @include button-style($deep-sea, $deep-sea);
+    }
+
+    &:focus {
+      @include button-style($deep-sea, $mountain-meadow);
+    }
+  }
+
+  &--amaranth {
+    @include button-style($amaranth, $amaranth);
+
+    &:hover {
+      @include button-style($french-rose, $french-rose);
+    }
+
+    &:active {
+      @include button-style($cardinal, $cardinal);
+    }
+
+    &:focus {
+      @include button-style($cardinal, $french-rose);
+    }
+  }
+}
